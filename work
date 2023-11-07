@@ -1,0 +1,19 @@
+provider "aws" {
+    region = "us-east-1"
+    access_key = "AKIA3SDZWNMZNJF2WUSS"
+    secret_key = "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"
+
+  
+}
+
+
+
+resource "aws_instance" "mynewserver" {
+    ami = "ami-0fc5d935ebf8bc3bc"
+    instance_type = "t2.micro"
+    key_name = "server_try"
+    tags = {
+      Name = "newjob"
+    }
+  
+}
